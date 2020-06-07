@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Botones</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="estilos.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="archivo.js"></script>
+
+</head>
+<body>
+ 
+
+ 
+<div class="container">
+
+  <!-- Trigger the modal with a button -->
+<br/><br/><br/>
+
+   <div align="center">
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_anadir">Añadir Promocion</button>
+
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_vertodos">Ver todos</button>
+  
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_izquierda">Ver izquierda</button>
+  
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_editar">Ver derecha</button>
+
+  </div> 
+
+
+
+
+  <!-- Modal1 -->
+  <div class="modal fade" id="modal_anadir" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content" align="center">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Introduce tu fotografia</h4>
+        </div>
+	
+        <div class="modal-body">
+          	
+		  <div class="row">
+		  
+
+		  
+		    <!--class="form-control input-lg input-search"-->
+			
+			<form id="formulario" method="post" action="prueba.php">
+		   <div class="col-md-12 col-xs-12 col-sm-12">
+		     Izquierda <input type="radio" id="posicion" name="posicion" value="izquierda" class="formularios">
+			Derecha: <input type="radio" id="posicion" name="posicion" value="derecha" class="formularios">
+			Link: <input type="text" id="link" name="link" class="formularios">
+		    <input type="number" id="orden" name="orden" class="formularios">
+			Foto: <input type="file" id="foto" name="foto" class="formularios">
+			</div>
+			
+			<br/>
+			   <div class="col-md-12 col-xs-12 col-sm-12" style="margin-top:2%;">
+		  
+				Fecha Inicio: <input type="text" id="fecha_inicio" name="fecha_inicio" class="formularios">
+				Fecha Fin: <input type="text" id="fecha_final" name="fecha_final" class="formularios">
+				
+				
+				Activo <select name="activo" id="activo" name="activo">
+					   <option value="SI">SI</option>
+					   <option value="NO">NO</option>
+				       </select>
+					Descripcion: <input type="text" id="descripcion" name="descripcion" class="formularios">
+			</div>
+			
+			
+			
+		  </div>
+		  <!--row-->
+		  
+        </div>
+        <div class="modal-footer">
+		
+		<input type="submit" value="Enviar" class="btn btn-default">
+		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		<!--
+		  <button type="button" class="btn btn-default" id="boton_aceptar1">Aceptar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  -->
+		  
+		  </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!--fin modal-->
+  
+
+</body>
+</html>

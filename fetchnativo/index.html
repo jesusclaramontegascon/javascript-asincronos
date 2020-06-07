@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+  
+   <script>
+  fetch('datos.php?user=1')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) 
+  { /*separamos los datos con sus vectores y objetos*/
+
+
+    /*cogemos los valores que nos saca la api*/
+    var respuestaJson=myJson;
+	console.log(respuestaJson);
+	document.getElementById("resultado").innerHTML =respuestaJson;
+
+
+  });
+
+
+  </script>
+</head>
+
+
+<body>
+
+ 
+  
+  
+  <div id="resultado">
+  </div>
+</body>
+
+</html>
